@@ -11,71 +11,85 @@
 //  Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
 //  Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 //  Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
-//
+
 const textD = "Dolphins's avg score: ";
 const textK = "Koalas's avg score: ";
 
-let testData = {
-  d: { a: 97, b: 108, c: 89 },
-  k: { a: 88, b: 91, c: 110 },
+let roundOne = {
+  dolphins: { a: 97, b: 108, c: 89 },
+  koalas: { a: 88, b: 91, c: 110 },
 };
 
-let dAvg = Math.floor((testData.d.a + testData.d.b + testData.d.c) / 3);
-console.log(textD, dAvg);
-let kAvg = Math.floor((testData.k.a + testData.k.b + testData.k.c) / 3);
-console.log(textK, kAvg);
+let dolphinsAvgRoundOne = Math.floor(
+  (roundOne.dolphins.a + roundOne.dolphins.b + roundOne.dolphins.c) / 3
+);
 
-if (dAvg > kAvg) {
+console.log(textD, dolphinsAvgRoundOne);
+
+let koalasAvgRoundOne = Math.floor(
+  (roundOne.koalas.a + roundOne.koalas.b + roundOne.koalas.c) / 3
+);
+
+console.log(textK, koalasAvgRoundOne);
+
+if (dolphinsAvgRoundOne > koalasAvgRoundOne) {
+  console.log(
+    `The Dolphins win, ${dolphinsAvgRoundOne} to ${koalasAvgRoundOne}! 🎉`
+  );
+} else if (dolphinsAvgRoundOne < koalasAvgRoundOne) {
+  console.log(
+    `The Koalas win, ${koalasAvgRoundOne} to ${dolphinsAvgRoundOne}! 🎉`
+  );
+} else {
+  console.log(`It was a draw. 😶`);
+}
+
+let roundTwo = {
+  dolphins: { a: 97, b: 112, c: 101 },
+  koalas: { a: 109, b: 95, c: 123 },
+};
+
+let dolphinsAvgRoundTwo = Math.floor(
+  (roundTwo.dolphins.a + roundTwo.dolphins.b + roundTwo.dolphins.c) / 3
+);
+
+console.log(textD, dolphinsAvgRoundTwo);
+
+let koalasAvgRoundTwo = Math.floor(
+  (roundTwo.koalas.a + roundTwo.koalas.b + roundTwo.koalas.c) / 3
+);
+console.log(textK, koalasAvgRoundTwo);
+
+if (dolphinsAvgRoundTwo > koalasAvgRoundTwo) {
   console.log(`The Dolphins win!`);
-} else if (dAvg < kAvg) {
+} else if (dolphinsAvgRoundTwo < koalasAvgRoundTwo) {
   console.log(`The Koalas win!`);
 } else {
   console.log(`It was a draw.`);
 }
 
-let testDataBonus1 = {
-  d: { a: 97, b: 112, c: 101 },
-  k: { a: 109, b: 95, c: 123 },
+let round3 = {
+  dolphins: { a: 97, b: 112, c: 101 },
+  koalas: { a: 109, b: 95, c: 106 },
 };
 
-let dAvgBonus1 = Math.floor(
-  (testDataBonus1.d.a + testDataBonus1.d.b + testDataBonus1.d.c) / 3
+let dolphinsAvgRoundThree = Math.floor(
+  (round3.dolphins.a + round3.dolphins.b + round3.dolphins.c) / 3
 );
-console.log(textD, dAvgBonus1);
-let kAvgBonus1 = Math.floor(
-  (testDataBonus1.k.a + testDataBonus1.k.b + testDataBonus1.k.c) / 3
+console.log(textD, dolphinsAvgRoundThree);
+let koalasAvgRoundThree = Math.floor(
+  (round3.koalas.a + round3.koalas.b + round3.koalas.c) / 3
 );
-console.log(textK, kAvgBonus1);
+console.log(textK, koalasAvgRoundThree);
 
-if (dAvgBonus1 > kAvgBonus1) {
+if (dolphinsAvgRoundThree > koalasAvgRoundThree) {
   console.log(`The Dolphins win!`);
-} else if (dAvgBonus1 < kAvgBonus1) {
+} else if (dolphinsAvgRoundThree < koalasAvgRoundThree) {
   console.log(`The Koalas win!`);
 } else {
   console.log(`It was a draw.`);
 }
 
-let testDataBonus2 = {
-  d: { a: 97, b: 112, c: 101 },
-  k: { a: 109, b: 95, c: 106 },
-};
-
-let dAvgBonus2 = Math.floor(
-  (testDataBonus2.d.a + testDataBonus2.d.b + testDataBonus2.d.c) / 3
-);
-console.log(textD, dAvgBonus2);
-let kAvgBonus2 = Math.floor(
-  (testDataBonus2.k.a + testDataBonus2.k.b + testDataBonus2.k.c) / 3
-);
-console.log(textK, kAvgBonus2);
-
-if (dAvgBonus2 > kAvgBonus2) {
-  console.log(`The Dolphins win!`);
-} else if (dAvgBonus2 < kAvgBonus2) {
-  console.log(`The Koalas win!`);
-} else {
-  console.log(`It was a draw.`);
-}
 const dataOne = {
   Dolphins: {
     score1: 96,
@@ -127,5 +141,3 @@ const size = Object.keys(dolphinsScores.set1).length;
 const sum = dolphinsScores.set1.reduce((sum, current) => sum + current, 0);
 
 const dolphinsScoresAvg1 = sum / size;
-
-console.log(dolphinsScoresAvg1);
