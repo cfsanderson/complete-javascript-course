@@ -12,17 +12,17 @@
 //  Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 //  Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 //
-const textD = "Dolphins's avg score: "
-const textK = "Koalas's avg score: "
+const textD = "Dolphins's avg score: ";
+const textK = "Koalas's avg score: ";
 
 let testData = {
-  d: {a: 97, b: 108, c: 89},
-  k: {a: 88, b: 91, c: 110}
-}
+  d: { a: 97, b: 108, c: 89 },
+  k: { a: 88, b: 91, c: 110 },
+};
 
-let dAvg = Math.floor((testData.d.a + testData.d.b + testData.d.c)/3);
+let dAvg = Math.floor((testData.d.a + testData.d.b + testData.d.c) / 3);
 console.log(textD, dAvg);
-let kAvg = Math.floor((testData.k.a + testData.k.b + testData.k.c)/3);
+let kAvg = Math.floor((testData.k.a + testData.k.b + testData.k.c) / 3);
 console.log(textK, kAvg);
 
 if (dAvg > kAvg) {
@@ -30,17 +30,21 @@ if (dAvg > kAvg) {
 } else if (dAvg < kAvg) {
   console.log(`The Koalas win!`);
 } else {
-  console.log(`It was a draw.`)
+  console.log(`It was a draw.`);
 }
 
 let testDataBonus1 = {
-  d: {a: 97, b: 112, c: 101},
-  k: {a: 109, b: 95, c: 123}
-}
+  d: { a: 97, b: 112, c: 101 },
+  k: { a: 109, b: 95, c: 123 },
+};
 
-let dAvgBonus1 = Math.floor((testDataBonus1.d.a + testDataBonus1.d.b + testDataBonus1.d.c)/3);
+let dAvgBonus1 = Math.floor(
+  (testDataBonus1.d.a + testDataBonus1.d.b + testDataBonus1.d.c) / 3
+);
 console.log(textD, dAvgBonus1);
-let kAvgBonus1 = Math.floor((testDataBonus1.k.a + testDataBonus1.k.b + testDataBonus1.k.c)/3);
+let kAvgBonus1 = Math.floor(
+  (testDataBonus1.k.a + testDataBonus1.k.b + testDataBonus1.k.c) / 3
+);
 console.log(textK, kAvgBonus1);
 
 if (dAvgBonus1 > kAvgBonus1) {
@@ -52,13 +56,17 @@ if (dAvgBonus1 > kAvgBonus1) {
 }
 
 let testDataBonus2 = {
-  d: {a: 97, b: 112, c: 101},
-  k: {a: 109, b: 95, c: 106}
-}
+  d: { a: 97, b: 112, c: 101 },
+  k: { a: 109, b: 95, c: 106 },
+};
 
-let dAvgBonus2 = Math.floor((testDataBonus2.d.a + testDataBonus2.d.b + testDataBonus2.d.c)/3);
+let dAvgBonus2 = Math.floor(
+  (testDataBonus2.d.a + testDataBonus2.d.b + testDataBonus2.d.c) / 3
+);
 console.log(textD, dAvgBonus2);
-let kAvgBonus2 = Math.floor((testDataBonus2.k.a + testDataBonus2.k.b + testDataBonus2.k.c)/3);
+let kAvgBonus2 = Math.floor(
+  (testDataBonus2.k.a + testDataBonus2.k.b + testDataBonus2.k.c) / 3
+);
 console.log(textK, kAvgBonus2);
 
 if (dAvgBonus2 > kAvgBonus2) {
@@ -68,3 +76,56 @@ if (dAvgBonus2 > kAvgBonus2) {
 } else {
   console.log(`It was a draw.`);
 }
+const dataOne = {
+  Dolphins: {
+    score1: 96,
+    score2: 108,
+    score3: 89,
+  },
+  Koalas: {
+    score1: 88,
+    score2: 91,
+    score3: 110,
+  },
+};
+
+const dataTwo = {
+  Dolphins: {
+    score1: 97,
+    score2: 112,
+    score3: 101,
+  },
+  Koalas: {
+    score1: 109,
+    score2: 95,
+    score3: 123,
+  },
+};
+
+const dataThree = {
+  Dolphins: {
+    score1: 97,
+    score2: 112,
+    score3: 101,
+  },
+  Koalas: {
+    score1: 109,
+    score2: 95,
+    score3: 106,
+  },
+};
+
+// Get the size of an object
+const dolphinsScores = {
+  set1: [96, 108, 89],
+  set2: [97, 112, 101],
+  set3: [97, 112, 101],
+};
+
+const size = Object.keys(dolphinsScores.set1).length;
+
+const sum = dolphinsScores.set1.reduce((sum, current) => sum + current, 0);
+
+const dolphinsScoresAvg1 = sum / size;
+
+console.log(dolphinsScoresAvg1);
