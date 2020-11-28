@@ -17,47 +17,35 @@ const textK = "Koalas's avg score: ";
 
 let roundOne = {
   dolphins: { a: 97, b: 108, c: 89 },
-  koalas: { a: 88, b: 91, c: 110 },
+  koalas: { a: 88, b: 91, c: 110 }
 };
 
-let dolphinsAvgRoundOne = Math.floor(
-  (roundOne.dolphins.a + roundOne.dolphins.b + roundOne.dolphins.c) / 3
-);
+let dolphinsAvgRoundOne = Math.floor((roundOne.dolphins.a + roundOne.dolphins.b + roundOne.dolphins.c) / 3);
 
 console.log(textD, dolphinsAvgRoundOne);
 
-let koalasAvgRoundOne = Math.floor(
-  (roundOne.koalas.a + roundOne.koalas.b + roundOne.koalas.c) / 3
-);
+let koalasAvgRoundOne = Math.floor((roundOne.koalas.a + roundOne.koalas.b + roundOne.koalas.c) / 3);
 
 console.log(textK, koalasAvgRoundOne);
 
 if (dolphinsAvgRoundOne > koalasAvgRoundOne) {
-  console.log(
-    `The Dolphins win, ${dolphinsAvgRoundOne} to ${koalasAvgRoundOne}! 🎉`
-  );
+  console.log(`The Dolphins win, ${dolphinsAvgRoundOne} to ${koalasAvgRoundOne}! 🎉`);
 } else if (dolphinsAvgRoundOne < koalasAvgRoundOne) {
-  console.log(
-    `The Koalas win, ${koalasAvgRoundOne} to ${dolphinsAvgRoundOne}! 🎉`
-  );
+  console.log(`The Koalas win, ${koalasAvgRoundOne} to ${dolphinsAvgRoundOne}! 🎉`);
 } else {
   console.log(`It was a draw. 😶`);
 }
 
 let roundTwo = {
   dolphins: { a: 97, b: 112, c: 101 },
-  koalas: { a: 109, b: 95, c: 123 },
+  koalas: { a: 109, b: 95, c: 123 }
 };
 
-let dolphinsAvgRoundTwo = Math.floor(
-  (roundTwo.dolphins.a + roundTwo.dolphins.b + roundTwo.dolphins.c) / 3
-);
+let dolphinsAvgRoundTwo = Math.floor((roundTwo.dolphins.a + roundTwo.dolphins.b + roundTwo.dolphins.c) / 3);
 
 console.log(textD, dolphinsAvgRoundTwo);
 
-let koalasAvgRoundTwo = Math.floor(
-  (roundTwo.koalas.a + roundTwo.koalas.b + roundTwo.koalas.c) / 3
-);
+let koalasAvgRoundTwo = Math.floor((roundTwo.koalas.a + roundTwo.koalas.b + roundTwo.koalas.c) / 3);
 console.log(textK, koalasAvgRoundTwo);
 
 if (dolphinsAvgRoundTwo > koalasAvgRoundTwo) {
@@ -70,16 +58,12 @@ if (dolphinsAvgRoundTwo > koalasAvgRoundTwo) {
 
 let round3 = {
   dolphins: { a: 97, b: 112, c: 101 },
-  koalas: { a: 109, b: 95, c: 106 },
+  koalas: { a: 109, b: 95, c: 106 }
 };
 
-let dolphinsAvgRoundThree = Math.floor(
-  (round3.dolphins.a + round3.dolphins.b + round3.dolphins.c) / 3
-);
+let dolphinsAvgRoundThree = Math.floor((round3.dolphins.a + round3.dolphins.b + round3.dolphins.c) / 3);
 console.log(textD, dolphinsAvgRoundThree);
-let koalasAvgRoundThree = Math.floor(
-  (round3.koalas.a + round3.koalas.b + round3.koalas.c) / 3
-);
+let koalasAvgRoundThree = Math.floor((round3.koalas.a + round3.koalas.b + round3.koalas.c) / 3);
 console.log(textK, koalasAvgRoundThree);
 
 if (dolphinsAvgRoundThree > koalasAvgRoundThree) {
@@ -94,46 +78,45 @@ const dataOne = {
   Dolphins: {
     score1: 96,
     score2: 108,
-    score3: 89,
+    score3: 89
   },
   Koalas: {
     score1: 88,
     score2: 91,
-    score3: 110,
-  },
+    score3: 110
+  }
 };
 
 const dataTwo = {
   Dolphins: {
     score1: 97,
     score2: 112,
-    score3: 101,
+    score3: 101
   },
   Koalas: {
     score1: 109,
     score2: 95,
-    score3: 123,
-  },
+    score3: 123
+  }
 };
 
 const dataThree = {
   Dolphins: {
     score1: 97,
     score2: 112,
-    score3: 101,
+    score3: 101
   },
   Koalas: {
     score1: 109,
     score2: 95,
-    score3: 106,
-  },
+    score3: 106
+  }
 };
 
-// Get the size of an object
 const dolphinsScores = {
   set1: [96, 108, 89],
   set2: [97, 112, 101],
-  set3: [97, 112, 101],
+  set3: [97, 112, 101]
 };
 
 const size = Object.keys(dolphinsScores.set1).length;
@@ -141,3 +124,4 @@ const size = Object.keys(dolphinsScores.set1).length;
 const sum = dolphinsScores.set1.reduce((sum, current) => sum + current, 0);
 
 const dolphinsScoresAvg1 = sum / size;
+console.log(dolphinsScoresAvg1);
