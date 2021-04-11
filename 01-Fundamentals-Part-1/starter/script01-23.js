@@ -120,12 +120,3 @@ if (favorite === 23) {
 }
 
 if(favorite !== 23) console.log("Why not 23?");
-
-
-
-
-
-
-
-
-
